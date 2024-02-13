@@ -17,5 +17,10 @@ namespace Knockoutjs.Controllers
         {
             return View();
         }
+
+        public ActionResult Observables()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Computed Function";
+}
+
+
+<script src="~/Scripts/knockout-3.5.1.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+    });
+    function changename()
+    {
+        ko.applyBindings(new AppViewModel());
+    }
+
+    function AppViewModel()
+    {
+        this.firstname = ko.observable("Majid");
+        this.lastname = ko.observable("Hemmati");
+
+        this.fullname = ko.computed(function () {
+            return this.firstname() + "  " + this.lastname();
+        },this)
+    }
+
+</script>
+
+<p> run Knockoutjs to replace firestname and lastname </p>
+
+<p> firstname : <strong data-bind="text: firstname"> todo </strong>  </p>
+<p> lastname : <strong data-bind="text : lastname"> todo </strong>  </p>
+
+<p> lastname : <strong data-bind="text : fullname"> todo </strong>  </p>
+
+<input type="text" data-bind="value : firstname" />
+<input type="text" data-bind="value : lastname" />
+
+
+<input type="button" value="click run" onclick="changename()" />

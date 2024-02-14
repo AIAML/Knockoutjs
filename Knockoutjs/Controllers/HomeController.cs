@@ -22,5 +22,9 @@ namespace Knockoutjs.Controllers
         {
             return View();
         }
+        public ActionResult ComputedFunction()
+        {
+            return View();
+        }
     }
 }

@@ -26,5 +26,10 @@ namespace Knockoutjs.Controllers
         {
             return View();
         }
+
+        public ActionResult Lists_Collections()
+        {
+            return View();
+        }
     }
 }

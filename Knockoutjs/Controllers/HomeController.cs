@@ -25,7 +25,7 @@ namespace Knockoutjs.Controllers
         public ActionResult ComputedFunction()
         {
             return View();
-        }
+        } 
 
         public ActionResult Lists_Collections()
         {
